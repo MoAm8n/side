@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Css/master.css"/>
+    <link rel="stylesheet" href="Css/all.min.css"/>
+    <link rel="stylesheet" href="Css/normalize.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>فـارسـكو</title>
+</head>
+<body>
+    <!-- Header-->
+    <header id="header" dir="rtl">
+        <div class="container">
+            <div class="content d-flex-between">
+                <h3 class="m-0"><a href="Home.html" class="logo fs-4 fw-bold">
+                    فـارسـكو
+                </a></h3>
+                <nav class="navbar navbar-expand d-none d-md-block">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="Men.html" class="nav-link clickMen">الرجالي</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">النساء</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">الاطفال</a></li>
+                    </ul>
+                </nav>
+                    <div class="search position-relative d-none d-md-block">
+                        <input class="search-input position-relative" type="text" placeholder="بحث" >
+                        <i class="bx bx-search position-absolute fs-4 text-black-50" style="top: 6px; right: 8px;"></i>
+                    </div>
+                    <div class="icons d-flex align-items-center">
+                        <a href="#" class="d-none d-lg-flex"><i class='bx bx-user'></i></a>
+                        <a href="#" class="d-none d-lg-flex"><i class='bx bx-heart'></i></a>
+                        <div class="cart-icon">
+                            <i class='bx bx-shopping-bag p-1' data-quantity="0" id="cart-icon-shop"></i>
+                            <div class="cart">
+                                <div class="d-flex-between p-2">
+                                    <h3 class="mb-0">السلة</h3>
+                                    <i class="bx bx-x fs-1 p-1" id="icon-Close" style="border: 1px solid var(--first-title);"></i>
+                                </div>
+                                <div class="cart-shop">
+                                    <!-- <div class="cart-box">
+                                        <img src="Images/T-shirt/productCard1.avif" class="card-img" alt="...">
+                                        <div class="card-titles">
+                                            <h5 class="card-title">title</h5>
+                                            <p class="card-text">direction</p>
+                                            <input type="number" class="card-quantity" value="1" id="" name="">
+                                            <p class="card-price">275ج</p>
+                                        </div>
+                                        <i class="bx bx-trash card-trash"></i> 
+                                    </div> -->
+                                </div>
+                                <div class="cart-total">
+                                    <h4>إجمالي الطلب</h4>
+                                    <p class="price-total"></p>
+                                </div>
+                                <div class="d-flex-between justify-content-center">
+                                    <button type="submit" class="button-sale">أذهب الي السوق</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <nav class="navbar navbar-expand flex-column-reverse p-0 m-1 d-md-none">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="Men.html" class="nav-link clickMen">الرجالي</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">النساء</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">الاطفال</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="p-2 pe-5 d-none d-md-flex" style="border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;">
+            <div class="main d-flex">
+                <a href="Men-New.html" class="ps-3" style="font-weight: 500;">
+                وصلنا حديثا
+                </a>
+                <a href="#" class="ps-3" style="font-weight: 500;">
+                    ملابس
+                </a>
+                <a href="#" class="ps-3" style="font-weight: 500;">
+                    أحذية
+                </a>
+                <a href="#" class="ps-3" style="font-weight: 500;">
+                    شنط
+                </a>
+                <a href="#" class="ps-3" style="font-weight: 500;">
+                    لوازم منزلية
+                </a>
+                <a href="#" class="ps-3" style="font-weight: 500;">
+                    تخفيضات
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- End Header-->
+    <div dir="rtl">
+        <div class="mobile d-md-none d-flex-between justify-content-around position-fixed w-100 z-3" style="box-shadow: var(--box-shadow); background-color: var(--body-color);">
+            <a href="Men.html" class="text-black fs-3 d-flex flex-column align-items-center">
+                <i class='bx bxs-home p-1' style="color: var(--first-title); border-top: 2px solid var(--first-title);"></i>
+                <span>الرئسيية</span>
+            </a>
+            <a href="Home.html" class="text-black fs-3 d-flex flex-column align-items-center">
+                <i class='bx bx-search-alt-2 p-1'></i>
+                <span>الأقسام</span>
+            </a>
+            <a href="#" class="text-black fs-3 d-flex flex-column align-items-center">
+                <i class='bx bx-heart p-1'></i>
+                <span>الأمنيات</span>
+            </a>
+            <a href="#" class="text-black fs-3 d-flex flex-column align-items-center">
+                <i class='bx bx-user p-1'></i>
+                <span>الحساب</span>
+            </a>
+        </div>
+    </div>
+    <!-- Start Container-->
+    <section class="home pt-5 pt-md-5 d-md-none">
+        <div class="content_men w-100 pt-md-4 pt-4">
+            <div dir="rtl" class="swiper mySwiper w-100 p-2">
+                <div class="swiper-wrapper pt-3" style="height: auto;">
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="Men-New.html">
+                                <img src="Images/module-01-ar.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-14-ar.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-ar.gif" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-1-ar.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men_tshirts_ar.jpg" alt=""  class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-10-ar.jpg" alt=""  class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-11-ar.jpg" alt=""  class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-02-ar.jpg" alt=""  class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-25">
+                        <div class="wrapper_men">
+                            <a href="#">
+                                <img src="Images/men-05-ar.jpg" alt=""  class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <a href="#">
+                <div class="sale m-auto d-sm-none" style="width: 95%;">
+                    <div>
+                        <img src="Images/module_07_ar.avif" alt="" class="w-100" >
+                    </div>
+                    <div>
+                        <img src="Images/module-06-ar.jpg" alt="" class="w-100">
+                    </div>
+                </div>
+            </a>
+        <div class="wrapper_gif m-auto d-md-none">
+            <img src="Images/men_0.gif" alt="" class="w-100 p-3 pb-2">
+        </div>
+        <div class="d-grid gap-1 m-auto pt-md-5" style="grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); width: 95%;" dir="rtl">
+            <a href="#" class="pt-md-5">
+                <div class="pt-md-4">
+                    <img src="Images/module-04-ar.avif" alt="" class="w-100">
+                </div>
+            </a>
+            <a href="#" class="pt-md-5">
+                <div class="pt-md-4">
+                    <img src="Images/module-02-ar.avif" alt="" class="w-100">
+                </div>
+            </a>
+            <a href="#" class="pt-md-5">
+                <div class="pt-md-4">
+                    <img src="Images/module-05-ar.avif" alt="" class="w-100">
+                </div>
+            </a>
+            <a href="#" class="pt-md-5">
+                <div class="pt-md-4">
+                    <img src="Images/module-08-ar.avif" alt="" class="w-100">
+                </div>
+            </a>
+            <a href="#" class="pt-md-5">
+                <div class="pt-md-4">
+                    <img src="Images/module-01-ar.avif" alt="" class="w-100">
+                </div>
+            </a>
+            <a href="#" class="pt-md-5">
+                <div class="pt-md-4">
+                    <img src="Images/module-09-ar.avif" alt="" class="w-100">
+                </div>
+            </a>
+        </div>
+        <div class="product_men p-3" dir="rtl">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+            <div class="product_title d-flex-between p-2">
+                <h5>افضل ستايلات الموسم</h5>
+                <h6><a href="#" class="text-decoration-underline">اعرض الكل</a></h6>
+            </div>
+                <div class="swiper-wrapper">
+                    <!-- Box 1 -->
+                    <div class="swiper-slide">
+                        <div class="box-product">
+                            <div dir="rtl" class="swiper mySwiper w-100">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-100">
+                                    <img src="Images/men_puma-2.avif" alt="" class="imgProductToCart checkImage">
+                                </div>
+                                </div>
+                            </div>
+                            <h2 class="title-product">بوما</h2>
+                            <p class="direction-Product">بدلة رياضية انديفيجوال رايز</p>
+                            <span class="price-product">320ج</span>
+                                <i class="bx bx-heart add-heart d-flex justify-content-center align-items-center"></i>
+                                <i class="bx bx-plus add-icon d-flex justify-content-center align-items-center"></i>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="swiper-slide">
+                        <div class="box-product">
+                            <div dir="rtl" class="swiper mySwiper w-100">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-100">
+                                    <img src="Images/men_puma-2.avif" alt="" class="imgProductToCart">
+                                </div>
+                                </div>
+                            </div>
+                            <h2 class="title-product">بوما</h2>
+                            <p class="direction-Product">بدلة رياضية انديفيجوال رايز</p>
+                            <span class="price-product">320ج</span>
+                                <i class="bx bx-heart add-heart d-flex justify-content-center align-items-center"></i>
+                                <i class="bx bx-plus add-icon d-flex justify-content-center align-items-center"></i>
+                        </div>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="swiper-slide">
+                        <div class="box-product">
+                            <div dir="rtl" class="swiper mySwiper w-100">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-100">
+                                    <img src="Images/men_puma-2.avif" alt="" class="imgProductToCart">
+                                </div>
+                                </div>
+                            </div>
+                            <h2 class="title-product">بوما</h2>
+                            <p class="direction-Product">بدلة رياضية انديفيجوال رايز</p>
+                            <span class="price-product">320ج</span>
+                                <i class="bx bx-heart add-heart d-flex justify-content-center align-items-center"></i>
+                                <i class="bx bx-plus add-icon d-flex justify-content-center align-items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-next d-none d-md-grid" style="position: absolute; background: #fff;
+                                width: 37px; height: 36px;
+                                border-radius: 20px;
+                                display: grid;
+                                place-content: center;
+                                font-size: 24px;
+                                color: #8f8f8f;
+                                z-index: 100;
+                                top: 38%;
+                                left: 2px;">
+                                <i class='bx bx-chevron-left'></i>
+                </div>
+                <div class="button-prev d-none d-md-grid" style="position: absolute; background: #fff;
+                                width: 37px; height: 36px;
+                                border-radius: 20px;
+                                display: grid;
+                                place-content: center;
+                                font-size: 24px;
+                                color: #8f8f8f;
+                                z-index: 100;
+                                top: 38%;
+                                right: 2px;">
+                                <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section dir="rtl" style="background: #fff;">
+        <div class="content p-3 d-flex-between justify-content-around gap-3">
+            <a href="#">
+                <img src="Images/men-center-1.jpg" alt="men-street" class="w-100">
+            </a>
+            <a href="#">
+                <img src="Images/men-center-2.jpg" alt="men-shoes" class="w-100">
+            </a>
+        </div>
+    </section>
+    <section dir="rtl" style="background: #fff;">
+        <div class="swiper mySwiper p-3">
+            <div class="product_title d-flex-between p-2">
+                <h5>أفضل المختارات رجالية</h5>
+                <h6><a href="#" class="text-decoration-underline">اعرض الكل</a></h6>
+            </div>
+            <div class="swiper-wrapper">
+                    <!-- Box 1 -->
+                    <div class="swiper-slide">
+                        <div class="box-product">
+                            <div dir="rtl" class="swiper mySwiper w-100">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-100">
+                                    <img src="Images/men_puma-2.avif" alt="" class="imgProductToCart">
+                                </div>
+                                </div>
+                            </div>
+                            <h2 class="title-product">بوما</h2>
+                            <p class="direction-Product">بدلة رياضية انديفيجوال رايز</p>
+                            <span class="price-product">320ج</span>
+                                <i class="bx bx-heart add-heart d-flex justify-content-center align-items-center"></i>
+                                <i class="bx bx-plus add-icon d-flex justify-content-center align-items-center"></i>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="swiper-slide">
+                        <div class="box-product">
+                            <div dir="rtl" class="swiper mySwiper w-100">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-100">
+                                    <img src="Images/men_puma-2.avif" alt="" class="imgProductToCart">
+                                </div>
+                                </div>
+                            </div>
+                            <h2 class="title-product">بوما</h2>
+                            <p class="direction-Product">بدلة رياضية انديفيجوال رايز</p>
+                            <span class="price-product">320ج</span>
+                                <i class="bx bx-heart add-heart d-flex justify-content-center align-items-center"></i>
+                                <i class="bx bx-plus add-icon d-flex justify-content-center align-items-center"></i>
+                        </div>
+                    </div>
+            </div>
+            <div class="button-next d-none d-md-grid" style="position: absolute; background: #fff;
+                                width: 37px; height: 36px;
+                                border-radius: 20px;
+                                display: grid;
+                                place-content: center;
+                                font-size: 24px;
+                                color: #8f8f8f;
+                                z-index: 100;
+                                top: 40%;
+                                left: 20px;">
+                                <i class='bx bx-chevron-left'></i>
+            </div>
+            <div class="button-prev d-none d-md-grid" style="position: absolute; background: #fff;
+                                width: 37px; height: 36px;
+                                border-radius: 20px;
+                                display: grid;
+                                place-content: center;
+                                font-size: 24px;
+                                color: #8f8f8f;
+                                z-index: 100;
+                                top: 40%;
+                                right: 20px;">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+    </section>
+    <section dir="rtl" style="background: #fff;">
+        <div class="content p-3 d-flex-between justify-content-around gap-3">
+            <a href="#">
+                <img src="Images/men-center-3.jpg" alt="men-street" class="w-100">
+            </a>
+            <a href="#">
+                <img src="Images/men-center-4.jpg" alt="men-shoes" class="w-100">
+            </a>
+        </div>
+    </section>
+    <section dir="rtl" style="background: #fff;">
+        <div class="swiper mySwiper p-3">
+            <div class="product_title d-flex-between p-2">
+                <h5>الأكثر مبيعا</h5>
+                <h6><a href="#" class="text-decoration-underline">اعرض الكل</a></h6>
+            </div>
+            <div class="swiper-wrapper">
+                    <!-- Box 1 -->
+                    <div class="swiper-slide">
+                        <div class="box-product">
+                            <div dir="rtl" class="swiper mySwiper w-100">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-100">
+                                    <img src="Images/men_puma-2.avif" alt="" class="imgProductToCart">
+                                </div>
+                                </div>
+                            </div>
+                            <h2 class="title-product">بوما</h2>
+                            <p class="direction-Product">بدلة رياضية انديفيجوال رايز</p>
+                            <span class="price-product">320ج</span>
+                                <i class="bx bx-heart add-heart d-flex justify-content-center align-items-center"></i>
+                                <i class="bx bx-plus add-icon d-flex justify-content-center align-items-center"></i>
+                        </div>
+                    </div>
+            </div>
+            <div class="button-next d-none d-md-grid" style="position: absolute; background: #fff;
+                                width: 37px; height: 36px;
+                                border-radius: 20px;
+                                display: grid;
+                                place-content: center;
+                                font-size: 24px;
+                                color: #8f8f8f;
+                                z-index: 100;
+                                top: 40%;
+                                left: 20px;">
+                                <i class='bx bx-chevron-left'></i>
+            </div>
+            <div class="button-prev d-none d-md-grid" style="position: absolute; background: #fff;
+                                width: 37px; height: 36px;
+                                border-radius: 20px;
+                                display: grid;
+                                place-content: center;
+                                font-size: 24px;
+                                color: #8f8f8f;
+                                z-index: 100;
+                                top: 40%;
+                                right: 20px;">
+                                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+    </section>
+    <!-- End Container-->
+    <footer class="pt-4" dir="rtl">
+        <div class="container">
+            <div class="row pb-2">
+                <div class="col-3 col-md-3">
+                    <h3 class="">فـارسـكو</h3>
+                    <ul class="list-unstyled">
+                        <li class="text-center text-md-end"><a href="#">شركتنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-3">
+                    <h3>خدمة العملاء</h3>
+                    <ul class="list-unstyled text-center text-md-end">
+                        <li class="pb-md-1"><a href="#">كيف يمكنني تتبع طلباتي ؟</a></li>
+                        <li class="pb-md-1"><a href="#">كيف يمكنني إرجاع منتج</a></li>
+                        <li class="pb-md-1"><a href="#">إرجاع المبلغ</a></li>
+                        <li class="pb-md-1"><a href="#">معلومات عن المنتجات المتوفرة</a></li>
+                        <li class="pb-md-1"><a href="#">التوصيل</a></li>
+                        <li class="pb-md-1"><a href="#">وسائل الدفع</a></li>
+                        <li class="pb-md-1"><a href="#">الاستبدال</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-3">
+                    <h3>افضل الفئات</h3>
+                    <ul class="list-unstyled text-center text-md-end">
+                        <li class="pb-md-1"><a href="#">ملابس رجالية</a></li>
+                        <li class="pb-md-1"><a href="#">ملابس نسائبة</a></li>
+                        <li class="pb-md-1"><a href="#">ملابس أطفال</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h3 class="text-center">تسوق عبر التطبيق</h3>
+                    <div class="downloadApp d-flex justify-content-center gap-3">
+                        <button type="button" class="bg-transparent border-0">
+                            <a href="#" target="_blank">
+                                <img src="Images/googleplay_light.svg" alt="App Store" class="">
+                            </a>
+                        </button>
+                        <button type="button" class="bg-transparent border-0">
+                            <a href="#" target="_blank">
+                                <img src="Images/appstore_light.svg" alt="App Store">
+                            </a>
+                        </button>
+                    </div>
+                    <h3 class="text-center pt-3">تابعنا</h3>
+                    <div class="socialMedial-links d-flex gap-3 justify-content-center">
+                        <a href="#">
+                            <div class="social_icon-wrapper d-flex-between justify-content-center">
+                                <img src="Images/facebook.svg" alt="facebook">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social_icon-wrapper d-flex-between justify-content-center">
+                                <img src="Images/x.svg" alt="X">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social_icon-wrapper d-flex-between justify-content-center">
+                                <img src="Images/instagram.svg" alt="Instagram">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social_icon-wrapper d-flex-between justify-content-center">
+                                <i class='bx bxl-whatsapp fs-3'></i>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="copyright text-center bg-primary">
+                © فـارسـكو 2023
+            </div>
+        </div>
+    </footer>
+    <div class="btnScrollY"  id="btnScrollY-Up">
+        <i class="bx bx-up-arrow-alt"></i>
+    </div>
+    <!-- start JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="Js/js.js"></script>
+    <script src="Js/mySwiper.js"></script>
+    <script src="Js/all.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- end  JS -->
+</body>
+</html>
