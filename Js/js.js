@@ -5,10 +5,12 @@ let iconClose = document.querySelector('#icon-Close');
 iconShop.onclick = () =>{
     contentShop.classList.add("openCartShop");
     iconShop.style.color = '#1b6ef3';
+    document.querySelector('.mobile').style.display ='none'
 }
 iconClose.onclick = () =>{
     contentShop.classList.remove("openCartShop");
     iconShop.style.color = '';
+    document.querySelector('.mobile').style.display =''
 }
 // product To Cart
 function myFunction(){
