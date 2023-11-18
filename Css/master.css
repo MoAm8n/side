@@ -341,7 +341,8 @@ footer{
         gap: 10px;
     }
     p{
-        font-size: 8px;
+        font-size: 10px;
+        margin-bottom: 0;
     }
 }
 .box-product{
@@ -355,7 +356,7 @@ footer{
 }
 .direction-Product{
     color: #282d31;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 .pagination{
     position: absolute; 
