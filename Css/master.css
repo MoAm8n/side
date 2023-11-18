@@ -19,7 +19,7 @@ a{
     text-decoration: none;
     color: var(--black-title);
 }
-i{
+i, img{
     cursor: pointer;
 }
 body{
@@ -259,8 +259,8 @@ footer{
 }
 .sizeBottom{
     position: relative;
-    width: 50px;
-    height: 30px;
+    width: 42px;
+    height: 42px;
     background: #fff;
     border: 1px solid #d0d0d0;
     display: flex;
@@ -270,6 +270,12 @@ footer{
 }
 .sizeBottom:hover{
     color: #8f8f8f;
+}
+.input-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
 }
 .addCatButton{
     border: 1px solid #d0d0d0;
@@ -326,7 +332,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
 }
 @media screen and (max-width: 500px) {
@@ -370,7 +376,7 @@ footer{
     z-index: 100;
 }
 .add-heart{
-    top: 10px;
+    top: 5px;
 }
 .add-icon{
     bottom: 120px;
@@ -455,10 +461,10 @@ footer{
     font-size: 19px;
 }
 .card-price{
-    text-align: end;
     color: var(--first-title);
     font-weight: bold;
     font-size: 19px;
+    margin-bottom: 0;
 }
 .card-trash{
     cursor: pointer;
@@ -558,5 +564,24 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid var(--body-color);
     }
+}
+.img-fixed-active{
+    position: fixed;
+    z-index: 1000;
+    background: white;
+    top: 90px;
+    height: 95px;
+    padding: 5px;
+}
+.click-right:focus{
+    background: var(--first-title);
+    color: #fff;
+    position: relative;
+    width: 50px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
 }

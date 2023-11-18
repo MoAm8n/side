@@ -3,10 +3,12 @@ let iconShop = document.querySelector('#cart-icon-shop');
 let contentShop = document.querySelector('.cart');
 let iconClose = document.querySelector('#icon-Close');
 iconShop.onclick = () =>{
-    contentShop.classList.add("openCartShop")
+    contentShop.classList.add("openCartShop");
+    iconShop.style.color = '#1b6ef3';
 }
 iconClose.onclick = () =>{
-    contentShop.classList.remove("openCartShop")
+    contentShop.classList.remove("openCartShop");
+    iconShop.style.color = '';
 }
 // product To Cart
 function myFunction(){
@@ -74,8 +76,20 @@ function addToCart(title, direction, price, image){
     <div class="card-titles">
         <h5 class="card-title">${title}</h5>
         <p class="card-text">${direction}</p>
+        <div class="size-title pt-2 pb-2">
+        <h4 class="pb-1"><strong>مقاس</strong></h4>
+        <div class="d-flex gap-2">
+            <button type="button" class="sizeBottom">S</button>
+            <button type="button" class="sizeBottom">M</button>
+            <button type="button" class="sizeBottom">L</button>
+            <button type="button" class="sizeBottom">XL</button>
+            <button type="button" class="sizeBottom">2XL</button>
+            </div>
+        </div>
+        <div class="input-price">
         <input type="number" class="card-quantity" value="1" id="" name="">
         <p class="card-price">${price}</p>
+        </div>
     </div>
     <i class="bx bx-trash card-trash"></i>`;
     cartShopBox.innerHTML = cartShopContent;
@@ -173,6 +187,17 @@ window.onscroll = function(){
             // scrollHeader.classList.remove('headerHide')
             document.querySelector('.btnScrollY').classList.remove('show-btnScrollY')
             // document.querySelector('.mobile').classList.remove('mobileHide')
+        }
+    }
+}
+window.onscroll = function(){
+    if(scrollY>=25){
+        document.querySelector('.img-fixed').classList.add('img-fixed-active')
+        document.querySelector('.boxes-products').style.marginTop='45px';
+    }else{
+        if(scrollY<=25){
+            document.querySelector('.img-fixed').classList.remove('img-fixed-active')
+            document.querySelector('.boxes-products').style.marginTop='';
         }
     }
 }
