@@ -195,7 +195,7 @@ window.onscroll = function(){
 window.onscroll = function(){
     if(scrollY>=25){
         document.querySelector('.img-fixed').classList.add('img-fixed-active')
-        document.querySelector('.boxes-products').style.marginTop='45px';
+        document.querySelector('.boxes-products').style.marginTop='60px';
     }else{
         if(scrollY<=25){
             document.querySelector('.img-fixed').classList.remove('img-fixed-active')
@@ -210,4 +210,33 @@ btnScrollY.onclick = function(){
         top:0,
         behavior: "smooth"
     })
+}
+// click button
+let btnClick = document.querySelector('.button-sale');
+// console.log(btnClick);
+btnClick.addEventListener("click", ()=>{
+    btnClick.classList.add("btnClicked")
+    btnClick.innerHTML = ""
+    setTimeout(()=>{
+        btnClick.classList.remove("btnClicked")
+        btnClick.innerHTML = "تم"
+    }, 3000)
+})
+// search input
+let search = ()=>{
+    let searchInput = document.getElementById("search-input").value.toUpperCase();
+    let boxesProducts = document.getElementById("boxes_products")
+    let boxProduct = document.querySelectorAll(".box-product")
+    let productH6 = boxesProducts.getElementsByTagName("h6")
+    for (var i=0; i<productH6.length; i++){
+        let match = boxProduct[i].getElementsByTagName('h6')[0]
+        if (match){
+            let textValue = match.textContent || match.innerHTML
+            if (textValue.toUpperCase().indexOf(searchInput) > -1){
+                boxProduct[i].style.display = "";
+            }else{
+                boxProduct[i].style.display = "none";
+            }
+        }
+    }
 }
